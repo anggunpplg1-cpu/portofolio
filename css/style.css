@@ -1,0 +1,291 @@
+/* ==========================================
+   1. VARIABEL & WARNA (SOLID TANPA GRADASI)
+   ========================================== */
+:root {
+    --warna-biru-tua: #334155;    /* Biru tua soft (slate) */
+    --warna-biru-muda: #f8fafc;   /* Biru muda latar hero yang JAUH LEBIH SOFT & kalem */
+    --warna-latar-utama: #f8fafc; /* Latar utama bersih */
+    --warna-latar-alt: #e2e8f0;   /* Latar alternatif */
+    --warna-kartu: #ffffff;       /* Putih bersih untuk kartu */
+    --warna-teks: #1e293b;        /* Navy gelap lembut */
+    --warna-teks-muda: #475569;   /* Abu-abu kebiruan */
+    --border-warna: #cbd5e1;      /* Garis batas tipis */
+    --transisi: all 0.35s ease;
+}
+
+/* Reset Universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--warna-latar-utama);
+    color: var(--warna-teks);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGASI
+   ========================================== */
+.site-header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--border-warna);
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    color: var(--warna-teks);
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--warna-biru-tua);
+    font-weight: 700;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: var(--warna-teks-muda);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transisi);
+}
+
+.site-header nav a:hover {
+    color: var(--warna-biru-tua);
+}
+
+/* ==========================================
+   3. BAGIAN HERO / PROFIL ATAS (BIRU MUDA SANGAT SOFT)
+   ========================================== */
+.hero {
+    padding: 5rem 1rem;
+    background-color: #f4f8fb; /* Biru muda yang jauh lebih soft, kalem, dan nyaman di mata */
+    text-align: center;
+    border-bottom: 2px solid var(--border-warna);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.profile-frame {
+    padding: 5px;
+    background-color: var(--warna-biru-tua);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(51, 65, 85, 0.15);
+}
+
+.hero img.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+}
+
+.profile-name {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--warna-biru-tua);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+/* Warna dan kontras label kelas & sekolah dibuat lebih tegas agar jelas terbaca */
+.profile-class {
+    color: #ffffff; /* Mengubah warna teks menjadi putih bersih agar sangat kontras dan jelas terbaca */
+    background-color: #949fae; /* Tetap menggunakan warna solid biru tua soft */
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.3rem 1.1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    color: var(--warna-teks-muda);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.98rem;
+}
+
+/* ==========================================
+   4. KEAHLIAN
+   ========================================== */
+.skills {
+    padding: 4.5rem 1rem;
+    background-color: var(--warna-latar-alt);
+    border-bottom: 2px solid var(--border-warna);
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--warna-biru-tua);
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ==========================================
+   5. GALERI
+   ========================================== */
+.gallery {
+    padding: 4.5rem 1rem;
+    background-color: var(--warna-latar-utama);
+}
+
+.gallery h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--warna-biru-tua);
+    font-weight: 700;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ==========================================
+   6. KARTU & EFEK VISUAL
+   ========================================== */
+.card, .gallery-grid figure {
+    background-color: var(--warna-kartu);
+    padding: 2rem;
+    border-radius: 14px;
+    border: 2px solid var(--border-warna);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: var(--transisi);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--warna-biru-tua);
+}
+
+.card:hover, .gallery-grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(51, 65, 85, 0.1);
+    border-color: var(--warna-biru-tua);
+}
+
+.card h3 {
+    color: var(--warna-biru-tua);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--warna-teks-muda);
+    font-size: 0.92rem;
+}
+
+.gallery-grid img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: var(--transisi);
+}
+
+.gallery-grid figure:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-grid figcaption {
+    font-size: 0.92rem;
+    color: var(--warna-teks-muda);
+    font-weight: 500;
+}
+
+/* ==========================================
+   7. FOOTER
+   ========================================== */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--warna-biru-tua);
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-top: 2px solid var(--border-warna);
+    font-weight: 500;
+}
+
+/* ==========================================
+   8. MEDIA QUERY (RESPONSIF)
+   ========================================== */
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        gap: 3.5rem;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
